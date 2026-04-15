@@ -1,0 +1,24 @@
+from itertools import count
+
+student = {
+    "Петров": {"Китайский", "Русский"},
+    "Иванов": {"Китайский", "Английский"},
+    "Сидоров": {"Китайский", "Французкий", "Японский"},
+    "Авдеев": {"Русский", "Немецкий"}
+}
+
+language = set()
+
+for i in student.values():
+        language.update(i)
+
+print("Количество языков которые знают студенты: ", len(language))
+print("Отсортированный языки по алфавиту: ", sorted(language))
+
+a = []
+
+for i, j in student.items():
+    if "Китайский" in j:
+        a.append(i)
+
+print("Студенты которые знают китайский: ", a)
